@@ -1,0 +1,20 @@
+CREATE TABLE PERSON(
+	ID VARCHAR(50) PRIMARY KEY,
+	PASSWORD VARCHAR(50) NOT NULL,
+	NAME VARCHAR(50) NOT NULL
+);
+
+SELECT *  FROM PERSON;
+DROP TABLE PERSON;
+SELECT * FROM USER_TABLES;
+
+INSERT INTO PERSON VALUES('aaa','1234','홍주니');
+
+
+
+
+
+SELECT * FROM v$resource_limit where resource_name='processes';
+ALTER SYSTEM SET PROCESSES=200 SCOPE=spfile;
+shutdown immediate; --셧다운
+startup;
